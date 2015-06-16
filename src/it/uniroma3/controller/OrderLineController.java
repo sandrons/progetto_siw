@@ -27,38 +27,45 @@ public class OrderLineController {
 	private ProductController productController;
 
 	public String createOrderLine(Order o, Product p) {
+
 		OrderLine orderLine = new OrderLine(p.getPrice(),quantity,p);
 
-//				
-//				
-//	for(OrderLine ol : this.orderController.getOrderLines()) {
-//	
+		
 		if (p.getQuantity() - quantity >= 0)  {
-//			for (OrderLine ol : o.getOrderLines()) {
-//				if(ol.getProduct().equals(p.getName()))
-//				ol.getProduct().setQuantity(ol.getProduct().getQuantity() + p.getQuantity());
-//			
-//				else  committare varie volte
+			boolean trovato = false;
+
+			if(!(this.orderController.getOrderLines().isEmpty())){
+				for(int i = 0; ((i< this.orderController.getOrderLines().size()) && (trovato==false)) ; i++){ 
+					
+					if(this.orderController.getOrderLines().get(i).getProduct().getId().equals(p.getId())){
+						this.orderController.getOrderLines().get(i).setQuantity(this.orderController.getOrderLines().get(i).getQuantity() + this.quantity );
+						trovato = true;
+					}
+					else
+						this.orderController.getOrderLines().add(orderLine);
+					
+
+				}
+			}
+			else
 				this.orderController.getOrderLines().add(orderLine); 
-		
-				
-				return "basket";
+
+			return "basket";
 		}
-
-		
-	
-		
 		return "homePage"; //errorpage da mettere
-}
+	}
 
 
-//	public OrderLine getOl() {
-//		return ol;
-//	}
-//
-//	public void setOl(OrderLine ol) {
-//		this.ol = ol;
-//	}
+	//	public OrderLine getOl() {
+	//		return ol;
+	//	}
+	//
+	//	public void setOl(OrderLine ol) {
+	//		this.ol = ol;
+	//	}
+
+
+
 
 	public OrderController getOrderController() {
 		return orderController;
