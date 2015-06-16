@@ -18,6 +18,11 @@
     <div>
 			 <h:form><h:commandLink action="#{productController.catalogProducts}"
 					value="Aggiungi prodotto" />	
+					 
+				 <div><h:commandLink action="homePageNoChart"
+                                value="HomePage"
+                                rendered="#{customerController.customer!=null and orderController.order.aperto != 0}">
+                    </h:commandLink> </div>
         </h:form>
     </div>
 </f:view>
