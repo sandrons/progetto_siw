@@ -18,7 +18,8 @@
     <div><strong>Email</strong>: ${customerController.customer.email}</div>
     <h:form>
         <div><h:commandLink action="#{customerController.customerAddress(customerController.customer.id)}" value="Indirizzo di residenza"></h:commandLink></div>
-        <div><h:commandLink action="#{customerController.customerOrders(customerController.customer)}" value="Consulta i suoi ordini"></h:commandLink></div>
+        <div><h:commandLink action="#{customerController.customerOrders(customerController.customer)}" value="Consulta i suoi ordini"   ></h:commandLink></div>
+
     </h:form>
 </f:view>
 </body>
