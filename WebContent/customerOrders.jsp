@@ -29,6 +29,15 @@
                 </tr>
             </c:forEach>
         </table>
+        <div><h:commandLink action="customer"
+                                value="Torna indietro"
+                                rendered="#{adminController.admin !=null}">
+                    </h:commandLink> </div>
+                    
+                    <div><h:commandLink action="homePageNoChart"
+                                value="Torna indietro"
+                                rendered="#{customerController.customer !=null and adminController.admin == null}">
+                    </h:commandLink> </div>
     </h:form>
 </f:view>
 </body>

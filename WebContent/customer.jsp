@@ -19,7 +19,10 @@
     <h:form>
         <div><h:commandLink action="#{customerController.customerAddress(customerController.customer.id)}" value="Indirizzo di residenza"></h:commandLink></div>
         <div><h:commandLink action="#{customerController.customerOrders(customerController.customer)}" value="Consulta i suoi ordini"   ></h:commandLink></div>
-
+		<div><h:commandLink action="customers"
+                                value="Torna indietro"
+                                rendered="#{adminController.admin !=null}">
+                    </h:commandLink> </div>
     </h:form>
 </f:view>
 </body>
