@@ -15,11 +15,10 @@ import javax.faces.bean.SessionScoped;
 public class OrderLineController {
 
 	@EJB(name = "olFacade")
-	private OrderLineFacade orderLineFacade; //da eliminare con commit
+	private OrderLineFacade orderLineFacade; 
 	private Product product;
 	private Integer quantity;
-	//private OrderLine ol; commit
-
+	
 	@ManagedProperty(value = "#{orderController}")
 	private OrderController orderController;
 
@@ -52,19 +51,8 @@ public class OrderLineController {
 
 			return "basket";
 		}
-		return "homePage"; //errorpage da mettere
+		return "homePage"; 
 	}
-
-
-	//	public OrderLine getOl() {
-	//		return ol;
-	//	}
-	//
-	//	public void setOl(OrderLine ol) {
-	//		this.ol = ol;
-	//	}
-
-
 
 
 	public OrderController getOrderController() {

@@ -58,16 +58,6 @@ public class OrderFacade {
         em.merge(o);
     }
     
-    public Order getOrderFromIdInRequestMap(){
-
-		String stringId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("orderId");
-		long id = Long.valueOf(stringId).longValue();
-		Order order = this.getOrder(id);
-		return order;
-
-	}
-
-    
     public void removeOrder(Order o) {
     	Query q =  em.createQuery("DELETE FROM Order o WHERE o.id = :id");
     	q.setParameter("id", o.getId()).executeUpdate();
