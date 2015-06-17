@@ -1,0 +1,33 @@
+SPECIFICHE DEL PROGETTO DI SIW - APPELLO GIUGNO 2015
+
+Michele Ridolfi (461657)
+Marco Tabacchino (463410)
+Alessandro Temperoni (463415) 
+
+===========================================================
+
+Caso d'uso UC1: Consulta listino -> OK
+Caso d'uso UC2: Effettua ordine -> OK
+Caso d'uso UC3: Consulta i propri ordini -> OK
+Caso d'uso UC4: Inserimento prodotti nel catalogo -> OK
+
+
+===========================================================
+
+Caso d'uso UC1: Consulta catalogo
+La consultazione del catalogo può essere effettuata: 
+- dalla pagina index.jsp che risulta la prima ad essere visualizzata;
+- dalla pagina homePageUser.jsp che è la pagina gestita dall’utente subito dopo il login;
+- dalla pagine homePageAdmin.jsp che è la pagina gestita dall’admin subito dopo l’accesso;
+Cliccando sul nome di ciascun prodotto è possibile avere informazioni aggiuntive su di esso.
+
+Caso d'uso UC2: Effettua ordine
+Per effettuare un nuovo ordine il cliente deve essere (ovviamente registrato) loggato nel sistema. Nella pagina che appare dopo il login, homePageUser.jsp, è possibile selezionare “Nuovo Ordine” che permetterà di effettuare un nuovo ordine al cliente che potrà aggiungere prodotti a sua scelta dal catalogo finché non sarà soddisfatto del proprio ordine. A questo punto per creare un’istanza dell’ordine si deve cliccare su “Chiudi Ordine”, se per sbaglio non venisse fatto nella homePageUser.jsp verrà aggiunta una nuova voce: Carrello. Questa nuova funzionalità permette di chiudere ordini lasciati aperti.
+
+
+Caso d'uso UC3: Consulta i propri ordini
+Il cliente loggato può consultare la lista degli ordini effettuati e per ogni ordine avere tutti i dettagli sui prodotti scelti e lo stato dell'ordine stesso.
+
+Caso d'uso UC4: Inserimento prodotti nel catalogo
+Caso d’uso dell’Amministratore che dopo aver effettuato l’accesso ha la possibilità di aggiungere prodotti al catalogo inserendo tutti i dati relativi al prodotto che si vuole immettere.
+
