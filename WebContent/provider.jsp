@@ -15,10 +15,12 @@
     <div><strong>Numero di Telefono</strong>: ${providerController.provider.phoneNumber}</div>
     <div><strong>Email</strong>: ${providerController.provider.email}</div>
     <div><strong>P.IVA</strong>: ${providerController.provider.vatin}</div>
-    <h:form>
-        <div><h:commandLink action="#{providerController.providerAddress(providerController.provider)}" value="Indirizzo fornitore"></h:commandLink></div>
-        <div><a href='<c:url value="/faces/products.jsp" />'>Consulta i tuoi ordini</a></div>
-    </h:form>
+    
+    <div><h:commandLink action="providers"
+                                value="Torna indietro"
+                                >
+                    </h:commandLink> </div>
+    
 </f:view>
 
 </body>

@@ -12,12 +12,13 @@
 </head>
 <body>
 <f:view>
+	<h1>Inserisci i tuoi dati:</h1>
     <h:form>
-        <div>Name: <h:inputText value="#{customerController.firstName}"
+        <div>Nome: <h:inputText value="#{customerController.firstName}"
                                 required="true"
                                 requiredMessage="Name is mandatory" id="firstName"/> <strong><h:message for="firstName" /></strong>
         </div>
-        <div>Surname: <h:inputText value="#{customerController.lastName}"
+        <div>Cognome: <h:inputText value="#{customerController.lastName}"
                                 required="true"
                                 requiredMessage="Code is mandatory"  id="lastName"/> <h:message for="lastName" />
         </div>
@@ -25,7 +26,7 @@
                                  required="true"
                                  requiredMessage="Email is mandatory" id="email"/> <h:message for="email" />
         </div>
-        <div>Birthday date: <h:inputText value="#{customerController.dateOfBirth}"
+        <div>Data di nascita: <h:inputText value="#{customerController.dateOfBirth}"
                                     required="true"
                                     requiredMessage="Birthday date is mandatory"
                                     converterMessage="Birthday date must be a date" id="dateOfBirth"><f:convertDateTime pattern="dd-mm-yyyy" />
@@ -35,20 +36,20 @@
                                  required="true"
                                  requiredMessage="Password is mandatory" id="password"/> <h:message for="password" />
         </div>
-        <div><h1>Insert your address date here:</h1></div>
-        <div>Street: <h:inputText value="#{customerController.street}"
+        <div><h1>-----------------------------------------</h1></div>
+        <div>Indirizzo: <h:inputText value="#{customerController.street}"
                                  required="true"
                                  requiredMessage="Street is mandatory" id="street"/> <h:message for="street" />
         </div>
-        <div>City: <h:inputText value="#{customerController.city}"
+        <div>Città: <h:inputText value="#{customerController.city}"
                                  required="true"
                                  requiredMessage="City is mandatory" id="city"/> <h:message for="city" />
         </div>
-        <div>Zipe code: <h:inputText value="#{customerController.zipcode}"
+        <div>CAP: <h:inputText value="#{customerController.zipcode}"
                                  required="true"
                                  requiredMessage="Zipcode is mandatory" id="zipcode"/> <h:message for="zipcode" />
         </div>
-        <div>Country: <h:inputText value="#{customerController.country}"
+        <div>Paese: <h:inputText value="#{customerController.country}"
                                  required="true"
                                  requiredMessage="Country is mandatory" id="coutry"/> <h:message for="coutry" />
         </div>

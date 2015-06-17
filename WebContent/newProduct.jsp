@@ -12,29 +12,30 @@
 <body>
 <f:view>
 <h:form>
-    <div>Name: <h:inputText value="#{productController.name}" 
+<h1>Inserisci i dati del prodotto</h1>
+    <div>Nome: <h:inputText value="#{productController.name}" 
                      required="true"
                      requiredMessage="Name is mandatory"
                      id="name"/> <h:message for="name" />
 	</div>
-    <div>Price: <h:inputText value="#{productController.price}" 
+    <div>Prezzo: <h:inputText value="#{productController.price}" 
                      required="true"
                      requiredMessage="Price is mandatory"
                      converterMessage="Price must be a number"
                      id="price"/> <h:message for="price" />
 	</div>
-    <div>Description: <h:inputTextarea value="#{productController.description}" 
+    <div>Descrizione: <h:inputTextarea value="#{productController.description}" 
     				required="false" 
     				cols="20" 
     				rows="5" /> 
                      
 	</div>
-    <div>Code: <h:inputText value="#{productController.code}" 
+    <div>Codice: <h:inputText value="#{productController.code}" 
                      required="true"
                      requiredMessage="Code is mandatory"
                      id="code"/> <h:message for="code" />
 	</div>
-    <div>Quantity: <h:inputText value="#{productController.quantity}" 
+    <div>Quantita': <h:inputText value="#{productController.quantity}" 
                      required="true"
                      requiredMessage="Quantity is mandatory"
                      converterMessage="Quantity must be a number"

@@ -8,6 +8,7 @@ import it.uniroma3.model.Provider;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+
 import java.util.List;
 
 
@@ -26,6 +27,7 @@ public class ProviderController {
     private String vatin;
     private Provider provider;
     private List<Product> products;
+    private List<Provider> providers;
 
     private String street;
     private String city;
@@ -40,6 +42,36 @@ public class ProviderController {
 
         return "provider";
     }
+    
+    public String findProvider(Long id){
+        this.provider = providerFacade.getProvider(id);
+        return "provider";
+    }
+
+
+    public String catalogProvider() {
+        this.providers = providerFacade.getAllProviders();
+        return "providers";
+    }
+
+    public String deleteProviderFromCatalog(Long id){
+        providerFacade.deleteProvider(id);
+        this.providers = providerFacade.getAllProviders();
+
+        return "providers";
+    }
+
+    public String addProvider(Provider p){
+        this.provider = p;
+        return "newProvider";
+    }
+
+    public String providerAddress(Long id){
+        this.address = providerFacade.getProvider(id).getAddress();
+        return "providerAddress";
+    }   
+   
+    
 
 
     public Address getAddress() {
@@ -101,11 +133,22 @@ public class ProviderController {
     public List<Product> getProducts() {
         return products;
     }
+   
 
     public void setProducts(List<Product> products) {
         this.products = products;
     }
 
+    public List<Provider> getProviders() {
+        return providers;
+    }
+   
+
+    public void setProviders(List<Provider> providers) {
+        this.providers = providers;
+    }
+    
+    
     public ProviderFacade getProviderFacade() {
         return providerFacade;
     }

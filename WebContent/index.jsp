@@ -11,7 +11,7 @@
 </head>
 <body>
 	<f:view>
-		<h1>HomePage</h1>
+		<h1>La cantina della birra</h1>
 		<ul>
 			
 			<li><h:form>

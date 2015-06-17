@@ -1,6 +1,9 @@
 package it.uniroma3.facade;
 
+import java.util.List;
+
 import it.uniroma3.model.Address;
+import it.uniroma3.model.Product;
 import it.uniroma3.model.Provider;
 
 import javax.ejb.Stateless;
@@ -20,4 +23,21 @@ public class ProviderFacade {
 
         return provider;
     }
+    
+    public Provider getProvider(Long id) {
+        return em.find(Provider.class, id);
+    }
+
+
+    public List<Provider> getAllProviders() {
+        return em.createQuery("SELECT pr FROM Provider pr", Provider.class).getResultList();
+    }
+
+    public void deleteProvider(Long id){
+        em.remove(getProvider(id));
+    }
+
+
+   
+    
 }

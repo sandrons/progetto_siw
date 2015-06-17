@@ -11,6 +11,7 @@
 </head>
 <body>
 <f:view>
+<h1>Accesso utente</h1>
     <h:form>
         <div><strong>Email</strong>: <h:inputText value="#{customerController.email}"
                                                   required="true"

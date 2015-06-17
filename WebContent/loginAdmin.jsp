@@ -10,6 +10,7 @@
 </head>
 <body>
 <f:view>
+<h1>Accesso admin</h1>
     <h:form>
         <div><strong>Email</strong>: <h:inputText value="#{adminController.email}"
                                  required="true"
@@ -19,7 +20,7 @@
                                     required="true"
                                     requiredMessage="Password is mandatory" id="password"/> <strong><h:message for="password" /></strong>
         </div>
-        <div><h:commandButton value="Effettua Login" action="#{adminController.adminLogin}" /></div>
+        <div><h:commandButton value="Accedi" action="#{adminController.adminLogin}" /></div>
     </h:form>
 </f:view>
 

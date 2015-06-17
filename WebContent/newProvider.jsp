@@ -37,7 +37,7 @@
                                 required="true"
                                 requiredMessage="Campo obbligatorio!" id="city"/> <h:message for="city" />
         </div>
-        <div>Cap: <h:inputText value="#{providerController.zipcode}"
+        <div>CAP: <h:inputText value="#{providerController.zipcode}"
                                      required="true"
                                      requiredMessage="Campo obbligatorio!" id="zipcode"/> <h:message for="zipcode" />
         </div>

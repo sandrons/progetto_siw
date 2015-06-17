@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<h1>HOME PAGE AMMINISTRATORE</h1>
+<h1>Homepage amministratore</h1>
 <f:view>
     <h:form>
         <h2>${adminController.admin.firstName} ${adminController.admin.lastName}</h2>
@@ -21,6 +21,7 @@
 			<li><a href='<c:url value="/faces/newProduct.jsp" />'>Inserisci un nuovo prodotto</a></li>	
             <li><div><h:commandLink action="#{customerController.allCustomer}" value="Tutti i customer"></h:commandLink></div></li>
             <li><div><h:commandLink action="#{orderController.allOrders}" value="Tutti gli ordini"></h:commandLink></div></li>
+            <li><div><h:commandLink action="#{providerController.catalogProvider}" value="Tutti i fornitori"></h:commandLink></div></li>
             <li><div><h:commandLink value="Effettua Logout" action="#{adminController.adminLogout}" /></div></li>
         </ul>
     </h:form>
